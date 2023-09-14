@@ -1,0 +1,75 @@
+/* 设置网页的背景颜色为浅蓝色 */
+body {
+    background-color: lightblue;
+}
+
+/* 设置标题的样式为居中，字体大小为36px，颜色为白色 */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: white;
+}
+
+/* 设置表格的样式为居中，边框为5px实线，边框颜色为黑色 */
+table {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: cadetblue;
+}
+
+/* 设置表格单元格的样式为宽度和高度都为100px，边框为2px实线，边框颜色为黑色，字体大小为72px，字体粗细为粗体，水平和垂直对齐方式都为居中 */
+td {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 72px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* 设置按钮的样式为宽度和高度都为100px，背景颜色为白色，字体大小为24px，字体粗细为粗体 */
+button {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.restart-button {
+    width: 120px;
+    margin-right: 5px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.pause-button {
+    width: 120px;
+    margin-right: 5px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.custom-div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
