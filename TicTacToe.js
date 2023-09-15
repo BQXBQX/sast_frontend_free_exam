@@ -23,15 +23,16 @@ async function clickCell(index) {
 
         // 判断当前玩家是否已经赢得游戏，如果是，则弹出提示框，并结束游戏，如果否，则继续
          if (checkWin(turn)) {
-            // alert(turn + "赢了！");
              gameEnd(turn);
              return;
         }
 
         // 判断是否已经没有空闲的单元格，如果是，则弹出提示框，并结束游戏，如果否，则继续
         if (checkDraw()) {
-            alert("平局！");
-            gameStart();
+            turn = ""
+            gameEnd(turn)
+            // alert("平局！");
+            // gameStart();
             return;
         }
 
@@ -62,8 +63,8 @@ function checkWin(symbol) {
         }
     }
 
-    // 如果没有找到任何连线方式，返回假值
     return false;
+
 }
 
 // 定义一个函数，用于判断是否已经没有空闲的单元格
@@ -123,7 +124,15 @@ function gameEnd(winner) {
     });
 
     const text = document.createElement("h4");
-    text.textContent = " congratulation!!! player " + winner
+    if(winner)
+    {
+        text.textContent = " congratulation!!! player  " + winner
+    }
+    else
+    {
+        text.textContent = "The game ended in a draw!!!"
+    }
+    // text.textContent = " congratulation!!! player " + winner
 
 // Append the buttons to the div
     div.appendChild(restartButton);
